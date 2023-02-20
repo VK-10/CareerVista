@@ -8,17 +8,23 @@
     android:background="@color/black">
 
     <LinearLayout
-        android:layout_width="173dp"
+        android:layout_width="match_parent"
         android:layout_height="130dp"
         android:orientation="horizontal">
 
         <ImageView
+            android:layout_marginTop="30sp"
             android:layout_width="131dp"
             android:layout_height="86dp"
             android:src="@drawable/icon"/>
+
         <TextView
-            android:layout_width=""
-            android:layout_height=""
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="CareerVista"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:layout_marginTop="40sp"/>
 
     </LinearLayout>
 
