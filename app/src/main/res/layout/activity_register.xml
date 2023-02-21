@@ -45,48 +45,56 @@
             android:textColor="@color/white"
             android:textSize="35sp" />
         <EditText
+            android:id="@+id/name_user"
             android:layout_marginTop="25dp"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:text="name"
+            android:hint="name"
             android:background="@color/white"
             android:layout_marginLeft="80dp"
             android:textSize="20sp"
             android:padding="10dp"/>
-
         <EditText
+            android:id="@+id/email_user"
             android:layout_marginTop="25dp"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:text="password"
+            android:hint="email"
+            android:background="@color/white"
+            android:layout_marginLeft="80dp"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/password_user"
+            android:layout_marginTop="25dp"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:hint="password"
             android:background="@color/white"
             android:layout_marginLeft="80dp"
             android:textSize="20sp"
             android:inputType="textVisiblePassword"
             android:padding="10dp"/>
+
         <EditText
+            android:id="@+id/phone_number"
             android:layout_marginTop="25dp"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:text="email"
+            android:hint="phone number"
             android:background="@color/white"
             android:layout_marginLeft="80dp"
             android:textSize="20sp"
-            android:padding="10dp"/>
-        <EditText
-            android:layout_marginTop="25dp"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:text="phone number"
-            android:background="@color/white"
-            android:layout_marginLeft="80dp"
-            android:textSize="20sp"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            />
 
 
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registerbutton"
         android:layout_below="@+id/register"
         android:layout_width="250dp"
         android:layout_height="wrap_content"

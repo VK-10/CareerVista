@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/iconimage"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon"/>
+    <TextView
+        android:id="@+id/text"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/iconimage"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="CareerVista"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/usermail"
+        android:layout_marginTop="30sp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="email"
+        android:layout_below="@+id/text"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:textSize="25dp"
+        android:padding="20dp"
+        />
+    <EditText
+        android:id="@+id/password_user"
+        android:layout_marginTop="30sp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="password"
+        android:layout_below="@+id/usermail"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:textSize="25dp"
+        android:padding="20dp"
+        android:inputType="textVisiblePassword" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_below="@+id/password_user"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Log In"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:padding="10sp"
+        android:background="#FFB90F"/>
+
+</RelativeLayout>

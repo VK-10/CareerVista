@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "80892470983",
+    "project_id": "careervista-f9b35",
+    "storage_bucket": "careervista-f9b35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80892470983:android:c00ef7fc644d03ca4240e2",
+        "android_client_info": {
+          "package_name": "com.example.carrervista"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "80892470983-1knlpof40ipgb1akfnjrmselornba3kc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbVMCp5kdENyRakaQzHKgqN3xzaxYYJUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "80892470983-1knlpof40ipgb1akfnjrmselornba3kc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
