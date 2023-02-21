@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/drawable/background.xml" value="0.148" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/drawable/background_box.xml" value="0.148" />
         <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_log.xml" value="0.25" />
         <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_log_in.xml" value="0.25" />
         <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_otpverification.xml" value="0.25" />
         <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_welcome.xml" value="0.25" />
       </map>
     </option>
   </component>

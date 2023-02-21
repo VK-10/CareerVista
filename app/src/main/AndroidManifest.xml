@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.carrervista">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Carrervista"
         tools:targetApi="31">
+        <activity
+            android:name=".Welcome"
+            android:exported="false" />
+        <activity
+            android:name=".OTPverification"
+            android:exported="false" />
         <activity
             android:name=".login"
             android:exported="false" />

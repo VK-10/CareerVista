@@ -16,7 +16,7 @@
             android:layout_marginTop="30sp"
             android:layout_width="131dp"
             android:layout_height="86dp"
-            android:src="@drawable/icon"/>
+            android:src="@drawable/icon2"/>
 
         <TextView
             android:layout_width="300dp"
@@ -47,7 +47,7 @@
         <EditText
             android:id="@+id/name_user"
             android:layout_marginTop="25dp"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="50dp"
             android:hint="name"
             android:background="@color/white"
@@ -57,7 +57,7 @@
         <EditText
             android:id="@+id/email_user"
             android:layout_marginTop="25dp"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="50dp"
             android:hint="email"
             android:background="@color/white"
@@ -69,7 +69,7 @@
         <EditText
             android:id="@+id/password_user"
             android:layout_marginTop="25dp"
-            android:layout_width="250dp"
+            android:layout_width="280dp"
             android:layout_height="50dp"
             android:hint="password"
             android:background="@color/white"
@@ -78,17 +78,37 @@
             android:inputType="textVisiblePassword"
             android:padding="10dp"/>
 
-        <EditText
-            android:id="@+id/phone_number"
-            android:layout_marginTop="25dp"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:hint="phone number"
-            android:background="@color/white"
-            android:layout_marginLeft="80dp"
-            android:textSize="20sp"
-            android:padding="10dp"
-            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="80dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="+91"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:background="@color/white"/>
+
+            <EditText
+                android:id="@+id/phone_number"
+                android:layout_marginTop="25dp"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:hint="phone number"
+                android:background="@color/white"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:inputType="number"/>
+
+
+        </LinearLayout>
+
+
 
 
     </LinearLayout>
@@ -96,9 +116,9 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/registerbutton"
         android:layout_below="@+id/register"
-        android:layout_width="250dp"
+        android:layout_width="282dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="80dp"
         android:layout_marginTop="25dp"
         android:background="#FFB90F"
         android:padding="10dp"
