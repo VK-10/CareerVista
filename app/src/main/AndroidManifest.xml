@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Carrervista"
         tools:targetApi="31">
         <activity
+            android:name=".MentorActivity"
+            android:exported="false" />
+        <activity
             android:name=".JobActivity"
             android:exported="false" />
         <activity

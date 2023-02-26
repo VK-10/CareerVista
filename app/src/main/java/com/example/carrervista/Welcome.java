@@ -35,7 +35,7 @@ public class Welcome extends AppCompatActivity implements DropInListener {
     DropInRequest dropInRequest;
     String email;
     LinearLayout linearLayoutclick;
-    LinearLayout linearLayoutclickcourse,linearclickjob;
+    LinearLayout linearLayoutclickcourse,linearclickjob,linearlayoutmentor;
 
     private FirebaseAuth mAuth;
     private DatabaseReference mDbRef;
@@ -67,6 +67,8 @@ public class Welcome extends AppCompatActivity implements DropInListener {
         linearLayoutclick=findViewById(R.id.scholarship);
         linearLayoutclickcourse=findViewById(R.id.course);
         linearclickjob=findViewById(R.id.layoutJobs);
+        linearlayoutmentor=findViewById(R.id.layoutmentorship);
+
 
         linearLayoutclickcourse.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +92,14 @@ public class Welcome extends AppCompatActivity implements DropInListener {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Welcome.this,JobActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        linearlayoutmentor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Welcome.this,MentorActivity.class);
                 startActivity(intent);
             }
         });
