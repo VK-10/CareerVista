@@ -3,15 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/drawable/background.xml" value="0.148" />
         <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/drawable/background_box.xml" value="0.148" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/drawable/item_design.xml" value="0.148" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/drawable/search_icon_background.xml" value="0.1" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/drawable/trends_background.xml" value="0.1" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/drawable/welcome.xml" value="0.1" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/drawable/welcome_page.xml" value="0.121" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/drawable/white_background.xml" value="0.1" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_bought_course.xml" value="0.264" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_course.xml" value="0.25" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_firstactivity.xml" value="0.32866043613707163" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_home.xml" value="0.1109375" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_job.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_log.xml" value="0.25" />
         <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_log_in.xml" value="0.25" />
         <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_otpverification.xml" value="0.25" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_payment.xml" value="0.25" />
         <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_register.xml" value="0.2" />
-        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_welcome.xml" value="0.25" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_scholar.xml" value="0.25" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/activity_welcome.xml" value="0.264" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/bought.xml" value="0.2" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/bought_course.xml" value="0.10885416666666667" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/item_design.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/layout_courseitem.xml" value="0.25" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/layout_jobitem.xml" value="0.10885416666666667" />
+        <entry key="..\:/Users/91790/AndroidStudioProjects/carrervista/app/src/main/res/layout/welcome_back.xml" value="0.1" />
       </map>
     </option>
   </component>

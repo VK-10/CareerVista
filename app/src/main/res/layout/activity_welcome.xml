@@ -1,30 +1,420 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Welcome">
+    tools:context=".Welcome"
+    android:background="@color/white">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome Onboard"
-        android:textSize="50sp"
-        android:layout_marginTop="50dp"
-        android:textColor="@color/black"
-        android:layout_centerHorizontal="true" />
-    <TextView
-        android:layout_below="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""/>
 
-</RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_header"
+        android:background="@drawable/welcome_page"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/texthello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:text="Hello"
+            android:textSize="25sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+        <TextView
+            android:id="@+id/textUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/texthello"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imageMenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="15dp"
+            android:contentDescription="CareerVista"
+            android:src="@drawable/ic_baseline_menu_24"
+            app:layout_constraintBottom_toBottomOf="@+id/texthello"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/texthello"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageMenu">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/search_icon_background"
+                android:hint="Search elements"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:importantForAutofill="no"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:background="@drawable/search_icon_background"
+                android:contentDescription="CareerVista"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_search_24" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layoutmentorship"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/white_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="H:1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="CareerVista"
+                    android:padding="2dp"
+                    android:src="@drawable/img_6"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Mentorship"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/course"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/white_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="H:1:1"
+                app:layout_constraintStart_toEndOf="@+id/layoutmentorship"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="CareerVista"
+                    android:padding="2dp"
+                    android:src="@drawable/img_2"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Courses"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutJobs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/white_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="H:1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutmentorship">
+
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="CareerVista"
+                    android:padding="2dp"
+                    android:src="@drawable/img_1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Jobs"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scholarship"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/white_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="H:1:1"
+                app:layout_constraintStart_toEndOf="@+id/layoutmentorship"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/course">
+
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="CareerVista"
+                    android:padding="2dp"
+                    android:src="@drawable/img_3"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Scholarship"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/trends_background"
+                android:padding="20dp"
+                app:layout_constraintStart_toEndOf="@+id/scholarship"
+                app:layout_constraintStart_toStartOf="@+id/layoutmentorship"
+                app:layout_constraintTop_toBottomOf="@+id/layoutJobs">
+
+
+                <TextView
+                    android:id="@+id/texttrends"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_background"
+                    android:paddingStart="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="2dp"
+                    android:text="Career begins at CareerVista"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="CareerVista"
+                    android:src="@drawable/ic_baseline_favorite_border_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/texttrends"
+                    app:layout_constraintTop_toTopOf="@id/texttrends"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <!-- Welcome Message -->
+
+    <!-- Courses Image Button -->
+<!--    <TextView-->
+<!--        android:id="@+id/welcome_message"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Welcome to Our Education App!"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textSize="24sp"-->
+<!--        android:layout_centerHorizontal="true"/>-->
+<!--    <TextView-->
+<!--        android:id="@+id/txt_name"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text=""-->
+<!--        android:layout_below="@+id/welcome_message" />-->
+
+
+
+
+
+    <!-- Jobs Image Button -->
+
+    <!-- Internship Image Button -->
+
+    <!-- Scholarship Image Button -->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearlayout1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/txt_name"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/courses_button"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/welcome_message"-->
+<!--            android:layout_marginLeft="50dp"-->
+<!--            android:layout_marginTop="266dp"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:contentDescription="Courses Button"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/img_2" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/jobs_button"-->
+<!--            android:layout_width="134dp"-->
+<!--            android:layout_height="128dp"-->
+<!--            android:layout_below="@id/welcome_message"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="113dp"-->
+<!--            android:layout_marginEnd="259dp"-->
+<!--            android:layout_marginRight="50dp"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:contentDescription="Jobs Button"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/img_1" />-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearlayout2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/linearlayout1"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:orientation="horizontal">-->
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/scholarship_button"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="189dp"-->
+<!--            android:layout_marginEnd="26dp"-->
+<!--            android:layout_marginRight="50dp"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:contentDescription="Scholarship Button"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/img_3" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/internship_button"-->
+<!--            android:layout_width="136dp"-->
+<!--            android:layout_height="97dp"-->
+<!--            android:layout_marginLeft="50dp"-->
+<!--            android:layout_marginTop="208dp"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:contentDescription="Internship Button"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/img" />-->
+
+
+<!--    </LinearLayout>-->
+
+
+
+
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/on_click"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="BUY NOW"-->
+<!--        android:layout_below="@+id/linearlayout2"/>-->
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/button_bought_course"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/on_click"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="Bought Course" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

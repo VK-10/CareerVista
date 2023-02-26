@@ -1,12 +1,16 @@
 package com.example.carrervista;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -43,6 +47,19 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        // Get a reference to the app's ActionBar
+        ActionBar actionBar = getSupportActionBar();
+
+        // Set the background color of the title in the ActionBar
+        ColorDrawable colorDrawable = new ColorDrawable(getResources().getColor((R.color.colorTrendingStart)));
+        actionBar.setBackgroundDrawable(colorDrawable);
+
+        // Set the status bar color
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.setStatusBarColor(getResources().getColor((R.color.colorTrendingStart)));
+        }
+
         register=findViewById(R.id.registerbutton);
         email=findViewById(R.id.email_user);
         number=findViewById(R.id.phone_number);
@@ -67,61 +84,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 else
                 {
-//                    PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-//
-//                        @Override
-//                        public void onVerificationCompleted(@NonNull PhoneAuthCredential credential) {
-//                            // This callback will be invoked in two situations:
-//                            // 1 - Instant verification. In some cases the phone number can be instantly
-//                            //     verified without needing to send or enter a verification code.
-//                            // 2 - Auto-retrieval. On some devices Google Play services can automatically
-//                            //     detect the incoming verification SMS and perform verification without
-//                            //     user action.
-//
-//                            signInWithPhoneAuthCredential(credential);
-//                        }
-//
-//                        @Override
-//                        public void onVerificationFailed(@NonNull FirebaseException e) {
-//                            // This callback is invoked in an invalid request for verification is made,
-//                            // for instance if the the phone number format is not valid.
-//                            Log.w(TAG, "onVerificationFailed", e);
-//
-//                            if (e instanceof FirebaseAuthInvalidCredentialsException) {
-//                                // Invalid request
-//                            } else if (e instanceof FirebaseTooManyRequestsException) {
-//                                // The SMS quota for the project has been exceeded
-//                            }
-//
-//                            // Show a message and update the UI
-//                        }
-//
-//                        @Override
-//                        public void onCodeSent(@NonNull String verificationId,
-//                                               @NonNull PhoneAuthProvider.ForceResendingToken token) {
-//                            // The SMS verification code has been sent to the provided phone number, we
-//                            // now need to ask the user to enter the code and then construct a credential
-//                            // by combining the code with a verification ID.
-//                            Log.d(TAG, "onCodeSent:" + verificationId);
-//
-//                            // Save verification ID and resending token so we can use them later
-//                            mVerificationId = verificationId;
-//                            mResendToken = token;
-//                        }
-//                    };
-//                    PhoneAuthOptions options =
-//                            PhoneAuthOptions.newBuilder(mAuth)
-//                                    .setPhoneNumber("+91"+user_phone_number)       // Phone number to verify
-//                                    .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
-//                                    .setActivity(RegisterActivity.this)                 // Activity (for callback binding)
-//                                    .setCallbacks(mCallbacks)          // OnVerificationStateChangedCallbacks
-//                                    .build();
-//                    PhoneAuthProvider.verifyPhoneNumber(options);
-
-
-
-                         phoneverification(user_phone_number);
-                        //  registration(user_name,user_email,user_password,user_phone_number);
+                    phoneverification(user_phone_number,user_name,user_email,user_password);
 
                 }
             }
@@ -131,7 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    public void phoneverification(String user_phone_number)
+    public void phoneverification(String user_phone_number,String user_name,String user_email,String user_password)
     {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 "+91" + user_phone_number, 60, TimeUnit.SECONDS, RegisterActivity.this, new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
@@ -150,40 +113,13 @@ public class RegisterActivity extends AppCompatActivity {
                         Intent intent=new Intent(RegisterActivity.this, OTPverification.class);
                         intent.putExtra("number",user_phone_number);
                         intent.putExtra("otp",s);
+                        intent.putExtra("name",user_name);
+                        intent.putExtra("email",user_email);
+                        intent.putExtra("password",user_password);
                         startActivity(intent);
                     }
                 }
         );
-    }
-
-
-
-    public void registration(String name,String email,String password,String number)
-    {
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            addtodata(name,email,user.getUid(),number);
-//                            Toast.makeText(RegisterActivity.this, "Registraion Successful", Toast.LENGTH_SHORT).show();
-//                            Intent intent=new Intent(RegisterActivity.this, OTPverification.class);
-//                            intent.putExtra("number",number);
-//                            startActivity(intent);
-
-                        } else {
-                            Toast.makeText(RegisterActivity.this,String.valueOf(task.getException()) , Toast.LENGTH_SHORT).show();
-                            Log.d("Some Error", String.valueOf(task.getException()));
-                        }
-                    }
-                });
-    }
-
-    private void addtodata(String name,String email,String uid,String number){
-        mDbRef= FirebaseDatabase.getInstance().getReference();
-        mDbRef.child("Clients").child(uid).setValue(new Clients(name,email,uid,number));
     }
 
 
