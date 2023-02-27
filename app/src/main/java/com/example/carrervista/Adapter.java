@@ -63,6 +63,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemView.setBackground(itemView.getContext().getDrawable(R.drawable.black_background_border));
 
             textView1=itemView.findViewById(R.id.txt_scholarship_name);
             textView2 = itemView.findViewById(R.id.txt_provider_name);
