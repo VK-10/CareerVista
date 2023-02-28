@@ -31,7 +31,7 @@ Link to be updated
 Install CareerVista
 
 ```bash
-  link
+  https://drive.google.com/file/d/1RKAI0FY5_n5wxtizl3qBC5fHSLN_v4EC/view?usp=sharing
 ```
     
 ## User Guide
